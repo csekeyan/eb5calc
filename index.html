@@ -19,30 +19,20 @@ body{background:var(--bg-primary);color:var(--text-primary);font-family:'DM Sans
 ::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:var(--text-muted);border-radius:3px}
-
-/* Layout */
 .container{max-width:1200px;margin:0 auto;padding:16px}
 header{text-align:center;padding:16px 0 4px}
 header h1{font-size:1.4rem;font-weight:700;letter-spacing:-0.5px}
 header p{color:var(--text-secondary);font-size:0.82rem;margin-top:2px}
-
-/* Desktop grid */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .grid-2-charts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
-@media(max-width:900px){
-  .grid-2,.grid-2-charts,.grid-3{grid-template-columns:1fr}
-}
-
+@media(max-width:900px){.grid-2,.grid-2-charts{grid-template-columns:1fr}}
 .disclaimer{background:rgba(108,140,255,0.08);border:1px solid rgba(108,140,255,0.2);border-radius:8px;padding:10px;margin:8px 0;font-size:0.72rem;color:var(--text-secondary);line-height:1.5}
 .disclaimer strong{color:var(--accent)}
-
 .section{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px;margin:0}
 .section h2{font-size:0.88rem;font-weight:600;color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:5px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
 .row.three{grid-template-columns:1fr 1fr 1fr}
 @media(max-width:480px){.row,.row.three{grid-template-columns:1fr}}
-
 .field{display:flex;flex-direction:column;gap:2px}
 .field label{font-size:0.72rem;color:var(--text-secondary);font-weight:500}
 .field input,.field select{background:var(--bg-secondary);border:1px solid var(--border);border-radius:6px;padding:6px 8px;color:var(--text-primary);font-family:inherit;font-size:0.85rem;outline:none;transition:border 0.2s}
@@ -50,23 +40,19 @@ header p{color:var(--text-secondary);font-size:0.82rem;margin-top:2px}
 .field input:disabled{opacity:0.5;cursor:not-allowed}
 .field .hint{font-size:0.65rem;color:var(--text-muted)}
 .inline-select{background:var(--bg-secondary);border:1px solid var(--border);border-radius:6px;padding:6px;color:var(--text-primary);font-family:inherit;font-size:0.85rem}
-
 .slider-row{margin-bottom:8px}
 .slider-row label{font-size:0.72rem;color:var(--text-secondary);font-weight:500;display:flex;justify-content:space-between}
 .slider-row label span{color:var(--accent);font-weight:600}
 .slider-row input[type=range]{width:100%;margin-top:3px;accent-color:var(--accent);height:5px}
-
 .total-row{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:var(--bg-hover);border-radius:6px;margin-top:6px}
 .total-row .lbl{font-size:0.75rem;color:var(--text-secondary)}
 .total-row .val{font-size:1rem;font-weight:700;color:var(--accent)}
-
 .split-bar{margin:6px 0;padding:6px 10px;background:var(--bg-hover);border-radius:6px}
 .split-bar .bar-labels{display:flex;justify-content:space-between;font-size:0.65rem;color:var(--text-secondary);margin-bottom:3px}
 .split-bar .bar-labels span:first-child{color:var(--yellow)}
 .split-bar .bar-labels span:last-child{color:var(--accent)}
 .split-bar .bar-track{height:6px;background:var(--accent);border-radius:3px;overflow:hidden}
 .split-bar .bar-fill{height:100%;background:var(--yellow);border-radius:3px;transition:width 0.2s}
-
 .toggle-row{display:flex;align-items:center;gap:7px;margin-bottom:8px}
 .toggle-row label{font-size:0.75rem;color:var(--text-secondary);cursor:pointer}
 .toggle{position:relative;width:36px;height:20px;flex-shrink:0}
@@ -75,14 +61,11 @@ header p{color:var(--text-secondary);font-size:0.82rem;margin-top:2px}
 .toggle .slider:before{content:'';position:absolute;left:2px;top:2px;width:14px;height:14px;background:var(--text-muted);border-radius:50%;transition:0.2s}
 .toggle input:checked+.slider{background:var(--accent);border-color:var(--accent)}
 .toggle input:checked+.slider:before{transform:translateX(16px);background:#fff}
-
 .collapsible{overflow:hidden;transition:max-height 0.3s ease,opacity 0.3s ease;max-height:0;opacity:0}
-.collapsible.open{max-height:600px;opacity:1}
+.collapsible.open{max-height:900px;opacity:1}
 .explainer{font-size:0.65rem;color:var(--text-muted);background:var(--bg-hover);padding:8px;border-radius:6px;margin-top:6px;line-height:1.5}
 .explainer strong{color:var(--yellow)}
 .inline-note{font-size:0.68rem;color:var(--text-muted);background:rgba(108,140,255,0.05);border-left:2px solid var(--accent);padding:6px 8px;margin:8px 0;border-radius:0 5px 5px 0;line-height:1.4}
-
-/* Results */
 .result-card{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px;margin-top:12px}
 .result-card h2{font-size:0.88rem;font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:5px}
 .verdict{text-align:center;padding:14px;border-radius:8px;margin-bottom:12px}
@@ -92,7 +75,6 @@ header p{color:var(--text-secondary);font-size:0.82rem;margin-top:2px}
 .verdict.eb5-wins h3{color:var(--green)}
 .verdict.noeb5-wins{background:rgba(248,113,113,0.1);border:1px solid rgba(248,113,113,0.2)}
 .verdict.noeb5-wins h3{color:var(--red)}
-
 .path-section{border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:0}
 .path-section.pa{border-color:rgba(248,113,113,0.3)}
 .path-section.pb{border-color:rgba(110,231,160,0.3)}
@@ -107,15 +89,13 @@ header p{color:var(--text-secondary);font-size:0.82rem;margin-top:2px}
 .path-row .val.pos{color:var(--green)}
 .path-row .val.neg{color:var(--red)}
 .path-row .val.warn{color:var(--yellow)}
+.path-row .val.muted{color:var(--text-muted)}
 .path-total{display:flex;justify-content:space-between;padding:6px 0 0;margin-top:6px;border-top:1px solid rgba(255,255,255,0.1);font-weight:700;font-size:0.85rem}
-
 .chart-wrap{position:relative;width:100%;height:240px}
 .note{font-size:0.65rem;color:var(--text-muted);text-align:center;padding:4px}
 footer{text-align:center;padding:16px;color:var(--text-muted);font-size:0.68rem;line-height:1.7}
 footer a{color:var(--accent);text-decoration:none}
 footer a:hover{text-decoration:underline}
-
-/* Spacing between grid rows */
 .grid-row{margin-bottom:12px}
 </style>
 </head>
@@ -123,57 +103,58 @@ footer a:hover{text-decoration:underline}
 <div class="container">
 <header>
   <h1>EB-5 Opportunity Cost Calculator</h1>
-  <p>Should you invest $800K in EB-5, or wait for your GC via other means?</p>
+  <p>Should you invest $800K in EB-5, or wait for your GC via other means? Purely on financial sense.</p>
 </header>
 
 <div class="disclaimer">
   <strong>Disclaimer:</strong> This is a decision-support tool, not financial or immigration advice. Every situation is unique. Consult qualified professionals. The creator is not responsible for decisions made using this tool.
 </div>
 
-<!-- Row 1: GC Timeline + EB-5 Investment -->
+<!-- Row 1: EB-5 Investment + RC Return (always visible, core inputs) -->
 <div class="grid-2 grid-row">
   <div class="section">
-    <h2>📅 GC Timeline</h2>
-    <div class="row">
-      <div class="field">
-        <label>EAD+AP/GC via EB-5</label>
-        <div class="row" style="margin:0;gap:4px">
-          <select id="eb5EadMonth" class="inline-select"></select>
-          <select id="eb5EadYear" class="inline-select"></select>
-        </div>
-        <span class="hint">~1.5-2yr after filing</span>
-      </div>
-      <div class="field">
-        <label>GC via EB-2/3/1A (other means)</label>
-        <div class="row" style="margin:0;gap:4px">
-          <select id="eb23GcMonth" class="inline-select"></select>
-          <select id="eb23GcYear" class="inline-select"></select>
-        </div>
-        <span class="hint">Based on priority date</span>
-      </div>
-    </div>
-    <div class="inline-note" style="margin-bottom:0">The gap between these dates drives the intangible benefits and side income advantage.</div>
-  </div>
-
-  <div class="section">
     <h2>💰 EB-5 Investment</h2>
-    <div class="row three">
-      <div class="field"><label>Lawyer & Filing</label><input type="number" id="lawyerFees" value="20000" step="1000"></div>
-      <div class="field"><label>RC Admin Fee</label><input type="number" id="rcAdminFee" value="5000" step="500"></div>
-      <div class="field"><label>Other</label><input type="number" id="otherFees" value="5000" step="500"></div>
-    </div>
     <div class="row">
       <div class="field"><label>Investment Month</label><select id="invMonth"></select></div>
       <div class="field"><label>Investment Year</label><select id="invYear"></select></div>
+    </div>
+    <div class="row three">
+      <div class="field"><label>Attorney & Filing Fee</label><input type="number" id="lawyerFees" value="20000" step="1000"></div>
+      <div class="field"><label>RC Admin Fee</label><input type="number" id="rcAdminFee" value="5000" step="500"></div>
+      <div class="field"><label>Other Fees</label><input type="number" id="otherFees" value="500" step="500"></div>
     </div>
     <div class="total-row">
       <span class="lbl">Total Deployed ($800K + fees)</span>
       <span class="val" id="totalDeployed">$830,000</span>
     </div>
   </div>
+
+  <div class="section">
+    <h2>🏦 RC Return</h2>
+    <div class="row">
+      <div class="field"><label>RC Return (Simple % / yr)</label><input type="number" id="rcReturn" value="1" step="0.5" min="0" max="10"><span class="hint">Simple interest on $800K. Check your PPM.</span></div>
+      <div class="field">
+        <label>When do you get $800K back?</label>
+        <div class="row" style="margin:0;gap:4px">
+          <select id="moneyBackMonth" class="inline-select"></select>
+          <select id="moneyBackYear" class="inline-select"></select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>GC via EB-2/3/1A (without EB-5)</label>
+        <div class="row" style="margin:0;gap:4px">
+          <select id="eb23GcMonth" class="inline-select"></select>
+          <select id="eb23GcYear" class="inline-select"></select>
+        </div>
+        <span class="hint">When would you get GC without EB-5?</span>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- Row 2: Funding + RC Return -->
+<!-- Row 2: Funding + Second Fiddle -->
 <div class="grid-2 grid-row">
   <div class="section">
     <h2>🏗️ Funding Source</h2>
@@ -212,76 +193,100 @@ footer a:hover{text-decoration:underline}
   </div>
 
   <div class="section">
-    <h2>🏦 RC Return</h2>
-    <div class="row">
-      <div class="field"><label>RC Return (Simple % / yr)</label><input type="number" id="rcReturn" value="1" step="0.5" min="0" max="10"></div>
-      <div class="field">
-        <label>$800K back when?</label>
-        <div class="row" style="margin:0;gap:4px">
-          <select id="moneyBackMonth" class="inline-select"></select>
-          <select id="moneyBackYear" class="inline-select"></select>
-        </div>
-      </div>
-    </div>
-    <div class="inline-note" style="margin-bottom:0">Simple interest on $800K. Check your PPM for actual RC terms.</div>
-  </div>
-</div>
-
-<!-- Row 3: Second Fiddle + Intangibles -->
-<div class="grid-2 grid-row">
-  <div class="section">
-    <h2>🎯 Second Fiddle</h2>
+    <h2>🎯 Additional Earning Potential</h2>
     <div class="toggle-row">
       <label class="toggle"><input type="checkbox" id="hasFiddle"><span class="slider"></span></label>
-      <label for="hasFiddle">Side income with EAD/GC freedom</label>
+      <label for="hasFiddle">I can earn more with work freedom</label>
     </div>
     <div class="collapsible" id="fiddleDetails">
+      <div class="inline-note" style="margin-top:0;margin-bottom:8px">With EAD+AP you can freelance, start a business, join a better company, or pursue any opportunity without visa constraints. Set when you plan to start.</div>
+      <div class="row">
+        <div class="field">
+          <label>Start earning (EB-5 path)</label>
+          <div class="row" style="margin:0;gap:4px">
+            <select id="fiddleEB5Month" class="inline-select"></select>
+            <select id="fiddleEB5Year" class="inline-select"></select>
+          </div>
+          <span class="hint">When you get EAD+AP (~6-12mo after filing)</span>
+        </div>
+        <div class="field">
+          <label>Start earning (non-EB-5 path)</label>
+          <div class="row" style="margin:0;gap:4px">
+            <select id="fiddleOtherMonth" class="inline-select"></select>
+            <select id="fiddleOtherYear" class="inline-select"></select>
+          </div>
+          <span class="hint">When you'd get GC without EB-5 (EB-2/3/1A)</span>
+        </div>
+      </div>
       <div class="row">
         <div class="field"><label>Starting Annual Income</label><input type="number" id="fiddle" value="50000" step="5000"></div>
         <div class="field"><label>Growth (% / yr)</label><input type="number" id="fiddleGrowth" value="5" step="1" min="0" max="30"></div>
       </div>
-      <div class="inline-note" style="margin-bottom:0">Starts from GC/EAD date for each path. EB-5 lets you start earlier.</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>🧘 Intangibles</h2>
-    <div class="toggle-row">
-      <label class="toggle"><input type="checkbox" id="hasIntangibles"><span class="slider"></span></label>
-      <label for="hasIntangibles">Value non-financial benefits</label>
-    </div>
-    <div class="collapsible" id="intangiblesDetails">
-      <div class="field" style="margin-bottom:6px">
-        <label>Peace of mind ($ / yr)</label>
-        <input type="number" id="peaceOfMind" value="25000" step="1000">
-        <span class="hint">No layoff anxiety, no employer lock-in</span>
-      </div>
-      <div class="row">
-        <div class="field"><label>Travel freedom ($ / trip)</label><input type="number" id="travelValue" value="3000" step="500"></div>
-        <div class="field"><label>Trips / year</label><input type="number" id="tripsPerYear" value="1" step="1" min="0" max="10"></div>
-      </div>
-      <div class="row">
-        <div class="field"><label>Stamping cost ($)</label><input type="number" id="stampingCost" value="5000" step="500"></div>
-        <div class="field"><label>Every X years</label><input type="number" id="stampingFreq" value="3" step="1" min="1" max="5"></div>
-      </div>
-      <div class="explainer"><strong>Applies during</strong> the years EB-5 gives you freedom earlier than EB-2/3/1A.</div>
     </div>
   </div>
 </div>
 
-<!-- Row 4: Projection (full width) -->
-<div class="grid-row">
+<!-- Row 3: Intangibles + Projection -->
+<div class="grid-2 grid-row">
+  <div class="section">
+    <h2>🧘 Peace of Mind & Freedom</h2>
+    <div class="toggle-row">
+      <label class="toggle"><input type="checkbox" id="hasIntangibles" checked><span class="slider"></span></label>
+      <label for="hasIntangibles">Assign value to stability and freedom</label>
+    </div>
+    <div class="collapsible open" id="intangiblesDetails">
+      <div class="inline-note" style="margin-top:0;margin-bottom:8px">Travel freedom and stamping relief start from EAD+AP. Full peace of mind kicks in after GC. Set dates based on your timeline.</div>
+      <div class="row">
+        <div class="field">
+          <label>EAD+AP date (travel + stamping relief starts)</label>
+          <div class="row" style="margin:0;gap:4px">
+            <select id="eadDateMonth" class="inline-select"></select>
+            <select id="eadDateYear" class="inline-select"></select>
+          </div>
+          <span class="hint">~6-12 months after filing</span>
+        </div>
+        <div class="field">
+          <label>GC date via EB-5 (full peace starts)</label>
+          <div class="row" style="margin:0;gap:4px">
+            <select id="gcDateMonth" class="inline-select"></select>
+            <select id="gcDateYear" class="inline-select"></select>
+          </div>
+          <span class="hint">~1-5 years after filing</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Travel freedom ($ / trip)</label><input type="number" id="travelValue" value="10000" step="500"></div>
+        <div class="field"><label>Trips / year</label><input type="number" id="tripsPerYear" value="1" step="1" min="0" max="10"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Stamping cost saved ($)</label><input type="number" id="stampingCost" value="5000" step="500"></div>
+        <div class="field"><label>Every X years</label><input type="number" id="stampingFreq" value="3" step="1" min="1" max="5"></div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Peace of mind after GC ($ / yr)</label>
+          <input type="number" id="gcPeace" value="50000" step="1000">
+          <span class="hint">Permanent status, no renewal, no uncertainty</span>
+        </div>
+        <div class="field">
+          <label>Intangible growth (% / yr)</label>
+          <input type="number" id="intangibleGrowth" value="3" step="1" min="0" max="15">
+          <span class="hint">Value of freedom grows as career grows</span>
+        </div>
+      </div>
+      <div class="explainer"><strong>How it works:</strong> Travel + stamping savings apply from EAD+AP date to your EB-2/3 GC date. Peace of mind applies from EB-5 GC date to EB-2/3 GC date. All grow at your chosen rate annually.</div>
+    </div>
+  </div>
+
   <div class="section">
     <h2>📈 Projection</h2>
-    <div class="grid-2" style="gap:20px">
-      <div class="slider-row" style="margin:0">
-        <label>Look ahead: <span id="yearsVal">10</span> years</label>
-        <input type="range" id="yearsSlider" min="5" max="30" value="10">
-      </div>
-      <div class="slider-row" style="margin:0">
-        <label>Market Return: <span id="mktRetVal">7</span>% compound</label>
-        <input type="range" id="mktReturn" min="1" max="20" value="7">
-      </div>
+    <div class="slider-row">
+      <label>Look ahead: <span id="yearsVal">15</span> years</label>
+      <input type="range" id="yearsSlider" min="5" max="30" value="15">
+    </div>
+    <div class="slider-row">
+      <label>Market Return: <span id="mktRetVal">7</span>% compound</label>
+      <input type="range" id="mktReturn" min="1" max="20" value="7">
     </div>
     <p class="note">End date: <span id="endDateLabel"></span></p>
   </div>
@@ -296,11 +301,10 @@ footer a:hover{text-decoration:underline}
   </div>
 
   <div style="text-align:center;margin-bottom:12px">
-    <button id="shareBtn" style="background:var(--accent);color:#fff;border:none;border-radius:6px;padding:8px 16px;font-family:inherit;font-size:0.8rem;font-weight:600;cursor:pointer;transition:all 0.2s">📋 Copy Shareable Link</button>
+    <button id="shareBtn" style="background:var(--accent);color:#fff;border:none;border-radius:6px;padding:8px 16px;font-family:inherit;font-size:0.8rem;font-weight:600;cursor:pointer">📋 Copy Shareable Link</button>
     <span id="shareMsg" style="margin-left:8px;font-size:0.75rem;color:var(--green);opacity:0;transition:opacity 0.3s"></span>
   </div>
 
-  <!-- Side by side breakdowns -->
   <div class="grid-2" style="margin-bottom:12px">
     <div class="path-section pa">
       <h4>Path A: No EB-5 (EB-2/3/1A)</h4>
@@ -312,7 +316,6 @@ footer a:hover{text-decoration:underline}
     </div>
   </div>
 
-  <!-- Side by side charts -->
   <div class="grid-2-charts">
     <div class="chart-wrap"><canvas id="mainChart"></canvas></div>
     <div class="chart-wrap"><canvas id="diffChart"></canvas></div>
@@ -320,7 +323,7 @@ footer a:hover{text-decoration:underline}
 </div>
 
 <div class="inline-note" style="margin:12px 0">
-  This shows the <strong style="color:var(--accent)">financial picture</strong>. Many choose EB-5 for stability, freedom, and reduced stress even when numbers don't favor it. Only you can decide what peace of mind is worth.
+  This shows the <strong style="color:var(--accent)">financial picture</strong>. Many choose EB-5 for stability and reduced stress even when numbers don't favor it. Only you can decide what peace of mind is worth.
 </div>
 
 <footer>
@@ -330,27 +333,31 @@ footer a:hover{text-decoration:underline}
 </div>
 
 <script>
-const $=id=>document.getElementById(id);
-const fmt=n=>{const s=n<0?'-':'';const a=Math.abs(n);if(a>=1e6)return s+'$'+(a/1e6).toFixed(2)+'M';return s+'$'+Math.round(a).toLocaleString()};
-const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const now=new Date(),curM=now.getMonth(),curY=now.getFullYear();
+var G=function(id){return document.getElementById(id)};
+var fmt=function(n){var s=n<0?'-':'';var a=Math.abs(n);if(a>=1e6)return s+'$'+(a/1e6).toFixed(2)+'M';return s+'$'+Math.round(a).toLocaleString()};
+var MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var now=new Date(),curM=now.getMonth(),curY=now.getFullYear();
 
-function popM(s,d){MN.forEach((m,i)=>{const o=document.createElement('option');o.value=i;o.textContent=m;if(i===d)o.selected=true;s.appendChild(o)})}
-function popY(s,d){for(let y=2020;y<=2050;y++){const o=document.createElement('option');o.value=y;o.textContent=y;if(y===d)o.selected=true;s.appendChild(o)}}
+function popM(s,d){MN.forEach(function(m,i){var o=document.createElement('option');o.value=i;o.textContent=m;if(i===d)o.selected=true;s.appendChild(o)})}
+function popY(s,d){for(var y=2020;y<=2050;y++){var o=document.createElement('option');o.value=y;o.textContent=y;if(y===d)o.selected=true;s.appendChild(o)}}
 
-popM($('eb5EadMonth'),5);popY($('eb5EadYear'),2027);
-popM($('eb23GcMonth'),0);popY($('eb23GcYear'),2032);
-popM($('invMonth'),10);popY($('invYear'),2025);
-popM($('moneyBackMonth'),10);popY($('moneyBackYear'),2030);
-popM($('loanCloseMonth'),10);popY($('loanCloseYear'),2030);
+popM(G('invMonth'),10);popY(G('invYear'),2025);
+popM(G('eb23GcMonth'),0);popY(G('eb23GcYear'),2040);
+popM(G('moneyBackMonth'),10);popY(G('moneyBackYear'),2030);
 
-$('hasLoan').addEventListener('change',function(){$('loanDetails').classList.toggle('open',this.checked);calculate()});
-$('collateralGrows').addEventListener('change',function(){$('collateralRateField').style.display=this.checked?'flex':'none';calculate()});
-$('hasFiddle').addEventListener('change',function(){$('fiddleDetails').classList.toggle('open',this.checked);calculate()});
-$('hasIntangibles').addEventListener('change',function(){$('intangiblesDetails').classList.toggle('open',this.checked);calculate()});
-$('loanAmt').addEventListener('input',function(){
-  const v=+this.value,p=Math.round(v/800000*100);
-  $('loanAmtLabel').textContent=fmt(v);$('loanPct').textContent=p+'%';$('cashPct').textContent=(100-p)+'%';$('loanBar').style.width=p+'%';
+popM(G('loanCloseMonth'),10);popY(G('loanCloseYear'),2030);
+popM(G('fiddleEB5Month'),5);popY(G('fiddleEB5Year'),2027);
+popM(G('fiddleOtherMonth'),0);popY(G('fiddleOtherYear'),2040);
+popM(G('eadDateMonth'),5);popY(G('eadDateYear'),2027);
+popM(G('gcDateMonth'),0);popY(G('gcDateYear'),2029);
+
+G('hasLoan').addEventListener('change',function(){G('loanDetails').classList.toggle('open',this.checked);calculate()});
+G('collateralGrows').addEventListener('change',function(){G('collateralRateField').style.display=this.checked?'flex':'none';calculate()});
+G('hasFiddle').addEventListener('change',function(){G('fiddleDetails').classList.toggle('open',this.checked);calculate()});
+G('hasIntangibles').addEventListener('change',function(){G('intangiblesDetails').classList.toggle('open',this.checked);calculate()});
+G('loanAmt').addEventListener('input',function(){
+  var v=+this.value,p=Math.round(v/800000*100);
+  G('loanAmtLabel').textContent=fmt(v);G('loanPct').textContent=p+'%';G('cashPct').textContent=(100-p)+'%';G('loanBar').style.width=p+'%';
 });
 
 function toD(m,y){return new Date(+y.value,+m.value,1)}
@@ -359,108 +366,132 @@ function fv(amt,from,to,rate){return amt*Math.pow(1+rate,Math.max(0,yrs(from,to)
 
 function accumFiddle(startDate,endDate,base,growPct,mktPct){
   if(endDate<=startDate)return 0;
-  const t=yrs(startDate,endDate);let s=0;const f=Math.floor(t);
-  for(let i=0;i<f;i++){s+=base*Math.pow(1+growPct,i)*Math.pow(1+mktPct,Math.max(0,t-i-0.5))}
-  const p=t-f;if(p>0)s+=base*Math.pow(1+growPct,f)*p;
+  var t=yrs(startDate,endDate);var s=0;var f=Math.floor(t);
+  for(var i=0;i<f;i++){s+=base*Math.pow(1+growPct,i)*Math.pow(1+mktPct,Math.max(0,t-i-0.5))}
+  var p=t-f;if(p>0)s+=base*Math.pow(1+growPct,f)*p;
   return s;
 }
 
-function calcIntangibleAnnual(){
-  if(!$('hasIntangibles').checked)return 0;
-  const peace=+$('peaceOfMind').value||0;
-  const travelVal=+$('travelValue').value||0;
-  const trips=+$('tripsPerYear').value||0;
-  const stampFreq=+$('stampingFreq').value||1;
-  const stampCost=+$('stampingCost').value||0;
-  return peace+(travelVal*trips)+(stampCost/stampFreq);
+function calcIntangibles(snap){
+  if(!G('hasIntangibles').checked)return{total:0,travel:0,peace:0};
+  var eadDate=toD(G('eadDateMonth'),G('eadDateYear'));
+  var gcDate=toD(G('gcDateMonth'),G('gcDateYear'));
+  var eb23GcDate=toD(G('eb23GcMonth'),G('eb23GcYear'));
+  var travelVal=+G('travelValue').value||0;
+  var trips=+G('tripsPerYear').value||0;
+  var stampCost=+G('stampingCost').value||0;
+  var stampFreq=+G('stampingFreq').value||1;
+  var gcPeace=+G('gcPeace').value||0;
+  var growRate=(+G('intangibleGrowth').value||0)/100;
+
+  var travelAnnual=travelVal*trips+stampCost/stampFreq;
+  var windowEnd=eb23GcDate>snap?snap:eb23GcDate;
+
+  // Travel + stamping: from eadDate to windowEnd
+  var travelTotal=0;
+  if(windowEnd>eadDate){
+    var tYrs=yrs(eadDate,windowEnd);
+    var tf=Math.floor(tYrs);
+    for(var i=0;i<tf;i++){travelTotal+=travelAnnual*Math.pow(1+growRate,i)}
+    var tp=tYrs-tf;if(tp>0)travelTotal+=travelAnnual*Math.pow(1+growRate,tf)*tp;
+  }
+
+  // Peace of mind: from gcDate to windowEnd
+  var peaceTotal=0;
+  if(gcDate<windowEnd){
+    var pYrs=yrs(gcDate,windowEnd);
+    var offset=yrs(eadDate,gcDate); // growth continues from EAD start
+    var pf=Math.floor(pYrs);
+    for(var i=0;i<pf;i++){peaceTotal+=gcPeace*Math.pow(1+growRate,offset+i)}
+    var pp=pYrs-pf;if(pp>0)peaceTotal+=gcPeace*Math.pow(1+growRate,offset+pf)*pp;
+  }
+
+  return{total:travelTotal+peaceTotal,travel:travelTotal,peace:peaceTotal};
 }
 
-function intangibleValue(eb5EadDate,eb23GcDate,snap){
-  if(!$('hasIntangibles').checked)return 0;
-  const windowEnd=eb23GcDate>snap?snap:eb23GcDate;
-  if(windowEnd<=eb5EadDate)return 0;
-  return calcIntangibleAnnual()*yrs(eb5EadDate,windowEnd);
-}
-
-let mainChart,diffChart;
-const cf={family:"'DM Sans',sans-serif"},gc2='rgba(85,98,117,0.2)';
+var mainChart,diffChart;
+var cf={family:"'DM Sans',sans-serif"},gc2='rgba(85,98,117,0.2)';
 function initCharts(){
-  const base={responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'#8896a8',font:cf,boxWidth:10,padding:8}},tooltip:{backgroundColor:'#151c28',titleColor:'#e2e8f0',bodyColor:'#8896a8',borderColor:'#1c2536',borderWidth:1,padding:8,bodyFont:cf,titleFont:cf,callbacks:{label:ctx=>ctx.dataset.label+': '+fmt(ctx.parsed.y)}}},scales:{x:{ticks:{color:'#556275',font:{...cf,size:9},maxRotation:45},grid:{color:gc2}},y:{ticks:{color:'#556275',font:{...cf,size:9},callback:v=>fmt(v)},grid:{color:gc2}}}};
-  mainChart=new Chart($('mainChart'),{type:'line',data:{labels:[],datasets:[
+  var base={responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'#8896a8',font:cf,boxWidth:10,padding:8}},tooltip:{backgroundColor:'#151c28',titleColor:'#e2e8f0',bodyColor:'#8896a8',borderColor:'#1c2536',borderWidth:1,padding:8,bodyFont:cf,titleFont:cf,callbacks:{label:function(ctx){return ctx.dataset.label+': '+fmt(ctx.parsed.y)}}}},scales:{x:{ticks:{color:'#556275',font:{family:cf.family,size:9},maxRotation:45},grid:{color:gc2}},y:{ticks:{color:'#556275',font:{family:cf.family,size:9},callback:function(v){return fmt(v)}},grid:{color:gc2}}}};
+  mainChart=new Chart(G('mainChart'),{type:'line',data:{labels:[],datasets:[
     {label:'No EB-5',borderColor:'#f87171',backgroundColor:'rgba(248,113,113,0.06)',fill:true,tension:0.3,pointRadius:0,borderWidth:2},
     {label:'EB-5',borderColor:'#6ee7a0',backgroundColor:'rgba(110,231,160,0.06)',fill:true,tension:0.3,pointRadius:0,borderWidth:2}
-  ]},options:{...base,plugins:{...base.plugins,title:{display:true,text:'Net Worth Over Time',color:'#e2e8f0',font:{...cf,size:12,weight:600}}}}});
-  diffChart=new Chart($('diffChart'),{type:'bar',data:{labels:[],datasets:[
+  ]},options:JSON.parse(JSON.stringify(base))});
+  mainChart.options.plugins.title={display:true,text:'Net Worth Over Time',color:'#e2e8f0',font:{family:cf.family,size:12,weight:'bold'}};
+  diffChart=new Chart(G('diffChart'),{type:'bar',data:{labels:[],datasets:[
     {label:'EB-5 Advantage',backgroundColor:[],borderRadius:3,borderSkipped:false}
-  ]},options:{...base,plugins:{...base.plugins,title:{display:true,text:'EB-5 Advantage by Year',color:'#e2e8f0',font:{...cf,size:12,weight:600}},legend:{display:false}}}});
+  ]},options:JSON.parse(JSON.stringify(base))});
+  diffChart.options.plugins.title={display:true,text:'EB-5 Advantage by Year',color:'#e2e8f0',font:{family:cf.family,size:12,weight:'bold'}};
+  diffChart.options.plugins.legend={display:false};
 }
 
 function calculate(){
-  const invDate=toD($('invMonth'),$('invYear'));
-  const eb5=800000;
-  const fees=(+$('lawyerFees').value||0)+(+$('rcAdminFee').value||0)+(+$('otherFees').value||0);
-  const total=eb5+fees;
-  const rcPct=(+$('rcReturn').value||0)/100;
-  const mbDate=toD($('moneyBackMonth'),$('moneyBackYear'));
-  const mkt=(+$('mktReturn').value||0)/100;
-  const years=+$('yearsSlider').value;
-  const endDate=new Date(curY+years,curM,1);
-  const totalYrs=yrs(invDate,endDate);
-  const rcYrs=Math.max(0,yrs(invDate,mbDate));
-  const rcTotal=eb5*rcPct*rcYrs;
-  const yrsFromMB=Math.max(0,yrs(mbDate,endDate));
+  var invDate=toD(G('invMonth'),G('invYear'));
+  var eb5=800000;
+  var fees=(+G('lawyerFees').value||0)+(+G('rcAdminFee').value||0)+(+G('otherFees').value||0);
+  var total=eb5+fees;
+  var rcPct=(+G('rcReturn').value||0)/100;
+  var mbDate=toD(G('moneyBackMonth'),G('moneyBackYear'));
+  var mkt=(+G('mktReturn').value||0)/100;
+  var years=+G('yearsSlider').value;
+  var endDate=new Date(curY+years,curM,1);
+  var totalYrs=yrs(invDate,endDate);
+  var rcYrs=Math.max(0,yrs(invDate,mbDate));
+  var rcTotal=eb5*rcPct*rcYrs;
+  var yrsFromMB=Math.max(0,yrs(mbDate,endDate));
 
-  const useLoan=$('hasLoan').checked;
-  const loanAmt=useLoan?+$('loanAmt').value:0;
-  const loanRate=(+$('loanRate').value||0)/100;
-  const loanCloseDate=toD($('loanCloseMonth'),$('loanCloseYear'));
-  const collGrows=useLoan&&$('collateralGrows').checked;
-  const collRate=collGrows?(+$('collateralRate').value||0)/100:0;
-  const loanRepayYrs=Math.max(0,yrs(invDate,loanCloseDate));
+  var useLoan=G('hasLoan').checked;
+  var loanAmt=useLoan?+G('loanAmt').value:0;
+  var loanRate=(+G('loanRate').value||0)/100;
+  var loanCloseDate=toD(G('loanCloseMonth'),G('loanCloseYear'));
+  var collGrows=useLoan&&G('collateralGrows').checked;
+  var collRate=collGrows?(+G('collateralRate').value||0)/100:0;
+  var loanRepayYrs=Math.max(0,yrs(invDate,loanCloseDate));
 
-  const useFiddle=$('hasFiddle').checked;
-  const fStart=useFiddle?(+$('fiddle').value||0):0;
-  const fGrow=useFiddle?(+$('fiddleGrowth').value||0)/100:0;
-  const eb5EadDate=toD($('eb5EadMonth'),$('eb5EadYear'));
-  const eb23GcDate=toD($('eb23GcMonth'),$('eb23GcYear'));
+  var useFiddle=G('hasFiddle').checked;
+  var fStart=useFiddle?(+G('fiddle').value||0):0;
+  var fGrow=useFiddle?(+G('fiddleGrowth').value||0)/100:0;
+  var fiddleEB5Date=useFiddle?toD(G('fiddleEB5Month'),G('fiddleEB5Year')):null;
+  var fiddleOtherDate=useFiddle?toD(G('fiddleOtherMonth'),G('fiddleOtherYear')):null;
+  var eb23GcDate=toD(G('eb23GcMonth'),G('eb23GcYear'));
 
-  $('totalDeployed').textContent=fmt(total);
-  $('yearsVal').textContent=years;
-  $('mktRetVal').textContent=$('mktReturn').value;
-  $('endDateLabel').textContent=MN[endDate.getMonth()]+' '+endDate.getFullYear();
+  G('totalDeployed').textContent=fmt(total);
+  G('yearsVal').textContent=years;
+  G('mktRetVal').textContent=G('mktReturn').value;
+  G('endDateLabel').textContent=MN[endDate.getMonth()]+' '+endDate.getFullYear();
 
   function calcA(snap){
-    let v=fv(total,invDate,snap,mkt);
-    if(useFiddle)v+=accumFiddle(eb23GcDate,snap,fStart,fGrow,mkt);
+    var v=fv(total,invDate,snap,mkt);
+    if(useFiddle)v+=accumFiddle(fiddleOtherDate,snap,fStart,fGrow,mkt);
     return v;
   }
 
   function calcB(snap){
-    const yFromInv=Math.max(0,yrs(invDate,snap));
-    const repayAtMB=!useLoan||loanAmt===0||loanCloseDate>=mbDate;
+    var yFromInv=Math.max(0,yrs(invDate,snap));
+    var repayAtMB=!useLoan||loanAmt===0||loanCloseDate>=mbDate;
 
     if(!useLoan||loanAmt===0){
-      let v=snap>=mbDate?fv(eb5+rcTotal,mbDate,snap,mkt):eb5;
+      var v=snap>=mbDate?fv(eb5+rcTotal,mbDate,snap,mkt):eb5;
       v-=fees;
-      if(useFiddle)v+=accumFiddle(eb5EadDate,snap,fStart,fGrow,mkt);
-      v+=intangibleValue(eb5EadDate,eb23GcDate,snap);
+      if(useFiddle)v+=accumFiddle(fiddleEB5Date,snap,fStart,fGrow,mkt);
+      v+=calcIntangibles(snap).total;
       return v;
     }
 
-    let collateral=0;
+    var collateral=0;
     if(repayAtMB){
       collateral=loanAmt*Math.pow(1+(collGrows?collRate:0),yFromInv);
     } else {
       if(snap<loanCloseDate){
         collateral=loanAmt*Math.pow(1+(collGrows?collRate:0),yFromInv);
       } else {
-        const collAtClose=loanAmt*Math.pow(1+(collGrows?collRate:0),Math.max(0,yrs(invDate,loanCloseDate)));
-        const remainder=Math.max(0,collAtClose-loanAmt);
+        var collAtClose=loanAmt*Math.pow(1+(collGrows?collRate:0),Math.max(0,yrs(invDate,loanCloseDate)));
+        var remainder=Math.max(0,collAtClose-loanAmt);
         collateral=remainder*Math.pow(1+(collGrows?collRate:0),Math.max(0,yrs(loanCloseDate,snap)));
       }
     }
 
-    let eb5Return=0;
+    var eb5Return=0;
     if(snap>=mbDate){
       if(repayAtMB){eb5Return=fv((eb5+rcTotal)-loanAmt,mbDate,snap,mkt)}
       else{eb5Return=fv(eb5+rcTotal,mbDate,snap,mkt)}
@@ -468,115 +499,113 @@ function calculate(){
       if(!repayAtMB&&snap>=loanCloseDate){eb5Return=eb5} else {eb5Return=eb5-loanAmt}
     }
 
-    const intEnd=snap<loanCloseDate?snap:loanCloseDate;
-    const interest=loanAmt*loanRate*Math.max(0,yrs(invDate,intEnd));
+    var intEnd=snap<loanCloseDate?snap:loanCloseDate;
+    var interest=loanAmt*loanRate*Math.max(0,yrs(invDate,intEnd));
 
-    let v=collateral+eb5Return-interest-fees;
-    if(useFiddle)v+=accumFiddle(eb5EadDate,snap,fStart,fGrow,mkt);
-    v+=intangibleValue(eb5EadDate,eb23GcDate,snap);
+    var v=collateral+eb5Return-interest-fees;
+    if(useFiddle)v+=accumFiddle(fiddleEB5Date,snap,fStart,fGrow,mkt);
+    v+=calcIntangibles(snap).total;
     return v;
   }
 
-  const startYear=invDate.getFullYear(),endYear=endDate.getFullYear();
-  const labels=[],pvA=[],pvB=[],diffs=[],dcols=[];
-  for(let y=startYear;y<=endYear;y++){
-    const snap=new Date(y,curM,1);
+  var startYear=invDate.getFullYear(),endYear=endDate.getFullYear();
+  var labels=[],pvA=[],pvB=[],diffs=[],dcols=[];
+  for(var y=startYear;y<=endYear;y++){
+    var snap=new Date(y,curM,1);
     labels.push(y.toString());
-    const a=calcA(snap),b=calcB(snap);
+    var a=calcA(snap),b=calcB(snap);
     pvA.push(a);pvB.push(b);
-    const d=b-a;diffs.push(d);dcols.push(d>=0?'rgba(110,231,160,0.7)':'rgba(248,113,113,0.7)');
+    var d=b-a;diffs.push(d);dcols.push(d>=0?'rgba(110,231,160,0.7)':'rgba(248,113,113,0.7)');
   }
 
-  const finalA=pvA[pvA.length-1],finalB=pvB[pvB.length-1],diff=finalB-finalA;
+  var finalA=pvA[pvA.length-1],finalB=pvB[pvB.length-1],diff=finalB-finalA;
 
-  const vb=$('verdictBox');
+  var vb=G('verdictBox');
   if(diff>=0){
     vb.className='verdict eb5-wins';
-    $('verdictTitle').textContent='EB-5 wins by '+fmt(diff);
-    $('verdictSub').textContent=`At ${MN[endDate.getMonth()]} ${endDate.getFullYear()}, EB-5 path has more value`;
+    G('verdictTitle').textContent='EB-5 wins by '+fmt(diff);
+    G('verdictSub').textContent='At '+MN[endDate.getMonth()]+' '+endDate.getFullYear()+', EB-5 path has more value';
   } else {
     vb.className='verdict noeb5-wins';
-    $('verdictTitle').textContent='No EB-5 wins by '+fmt(Math.abs(diff));
-    $('verdictSub').textContent=`At ${MN[endDate.getMonth()]} ${endDate.getFullYear()}, skipping EB-5 is financially better`;
+    G('verdictTitle').textContent='No EB-5 wins by '+fmt(Math.abs(diff));
+    G('verdictSub').textContent='At '+MN[endDate.getMonth()]+' '+endDate.getFullYear()+', skipping EB-5 is financially better';
   }
 
   // BREAKDOWN A
-  const a_market=fv(total,invDate,endDate,mkt);
-  const a_fiddle=useFiddle?accumFiddle(eb23GcDate,endDate,fStart,fGrow,mkt):0;
-  let hA='<div class="path-group"><div class="path-group-title">Assets</div>';
-  hA+=`<div class="path-row"><span class="desc">${fmt(total)} @ ${(mkt*100).toFixed(0)}% for ${totalYrs.toFixed(1)}yr</span><span class="val pos">${fmt(a_market)}</span></div>`;
-  if(useFiddle&&a_fiddle>0)hA+=`<div class="path-row"><span class="desc">Side income (${Math.max(0,yrs(eb23GcDate,endDate)).toFixed(1)}yr)</span><span class="val pos">${fmt(a_fiddle)}</span></div>`;
+  var a_market=fv(total,invDate,endDate,mkt);
+  var a_fiddle=useFiddle?accumFiddle(fiddleOtherDate,endDate,fStart,fGrow,mkt):0;
+  var hA='<div class="path-group"><div class="path-group-title">Assets</div>';
+  hA+='<div class="path-row"><span class="desc">'+fmt(total)+' @ '+(mkt*100).toFixed(0)+'% for '+totalYrs.toFixed(1)+'yr</span><span class="val pos">'+fmt(a_market)+'</span></div>';
+  if(useFiddle&&a_fiddle>0)hA+='<div class="path-row"><span class="desc">Side income ('+Math.max(0,yrs(fiddleOtherDate,endDate)).toFixed(1)+'yr)</span><span class="val pos">'+fmt(a_fiddle)+'</span></div>';
   hA+='</div>';
-  hA+=`<div class="path-total"><span>Net Worth</span><span>${fmt(finalA)}</span></div>`;
-  $('breakdownA').innerHTML=hA;
+  hA+='<div class="path-total"><span>Net Worth</span><span>'+fmt(finalA)+'</span></div>';
+  G('breakdownA').innerHTML=hA;
 
   // BREAKDOWN B
-  let hB='';
+  var hB='';
   if(!useLoan||loanAmt===0){
-    const moneyBack=eb5+rcTotal;
-    const mbGrown=fv(moneyBack,mbDate,endDate,mkt);
+    var moneyBack=eb5+rcTotal;
+    var mbGrown=fv(moneyBack,mbDate,endDate,mkt);
     hB+='<div class="path-group"><div class="path-group-title">EB-5 Return</div>';
-    hB+=`<div class="path-row"><span class="desc">$800K + RC (${(rcPct*100)}% x ${rcYrs.toFixed(1)}yr)</span><span class="val warn">${fmt(moneyBack)}</span></div>`;
-    hB+=`<div class="path-row"><span class="desc">Reinvested ${yrsFromMB.toFixed(1)}yr @ ${(mkt*100).toFixed(0)}%</span><span class="val pos">${fmt(mbGrown)}</span></div>`;
+    hB+='<div class="path-row"><span class="desc">$800K + RC ('+(rcPct*100)+'% x '+rcYrs.toFixed(1)+'yr)</span><span class="val warn">'+fmt(moneyBack)+'</span></div>';
+    hB+='<div class="path-row"><span class="desc">Reinvested '+yrsFromMB.toFixed(1)+'yr @ '+(mkt*100).toFixed(0)+'%</span><span class="val pos">'+fmt(mbGrown)+'</span></div>';
     hB+='</div>';
     hB+='<div class="path-group"><div class="path-group-title">Costs</div>';
-    hB+=`<div class="path-row"><span class="desc">Fees</span><span class="val neg">-${fmt(fees)}</span></div>`;
+    hB+='<div class="path-row"><span class="desc">Fees</span><span class="val neg">-'+fmt(fees)+'</span></div>';
     hB+='</div>';
   } else {
-    const repayAtMB=loanCloseDate>=mbDate;
-    const intYrsFinal=repayAtMB?rcYrs:loanRepayYrs;
-    const intTotal=loanAmt*loanRate*intYrsFinal;
-
+    var repayAtMB=loanCloseDate>=mbDate;
+    var intYrsFinal=repayAtMB?rcYrs:loanRepayYrs;
+    var intTotal=loanAmt*loanRate*intYrsFinal;
     hB+='<div class="path-group"><div class="path-group-title">Collateral</div>';
     if(repayAtMB){
-      const collFinal=loanAmt*Math.pow(1+(collGrows?collRate:0),totalYrs);
-      hB+=`<div class="path-row"><span class="desc">${fmt(loanAmt)} @ ${(collRate*100).toFixed(0)}% for ${totalYrs.toFixed(1)}yr</span><span class="val pos">${fmt(collFinal)}</span></div>`;
+      var collFinal=loanAmt*Math.pow(1+(collGrows?collRate:0),totalYrs);
+      hB+='<div class="path-row"><span class="desc">'+fmt(loanAmt)+' @ '+(collRate*100).toFixed(0)+'% for '+totalYrs.toFixed(1)+'yr</span><span class="val pos">'+fmt(collFinal)+'</span></div>';
     } else {
-      const collAtClose=loanAmt*Math.pow(1+(collGrows?collRate:0),loanRepayYrs);
-      const remainder=Math.max(0,collAtClose-loanAmt);
-      const yrsAfter=Math.max(0,yrs(loanCloseDate,endDate));
-      const remGrown=remainder*Math.pow(1+(collGrows?collRate:0),yrsAfter);
-      hB+=`<div class="path-row"><span class="desc">Grew to ${fmt(collAtClose)}, sold ${fmt(loanAmt)}</span><span class="val neg">-${fmt(loanAmt)}</span></div>`;
-      if(remainder>0)hB+=`<div class="path-row"><span class="desc">Remainder grows ${yrsAfter.toFixed(1)}yr</span><span class="val pos">${fmt(remGrown)}</span></div>`;
+      var collAtClose2=loanAmt*Math.pow(1+(collGrows?collRate:0),loanRepayYrs);
+      var remainder2=Math.max(0,collAtClose2-loanAmt);
+      var yrsAfter=Math.max(0,yrs(loanCloseDate,endDate));
+      var remGrown=remainder2*Math.pow(1+(collGrows?collRate:0),yrsAfter);
+      hB+='<div class="path-row"><span class="desc">Grew to '+fmt(collAtClose2)+', sold '+fmt(loanAmt)+'</span><span class="val neg">-'+fmt(loanAmt)+'</span></div>';
+      if(remainder2>0)hB+='<div class="path-row"><span class="desc">Remainder grows '+yrsAfter.toFixed(1)+'yr</span><span class="val pos">'+fmt(remGrown)+'</span></div>';
     }
     hB+='</div>';
-
     hB+='<div class="path-group"><div class="path-group-title">EB-5 Return</div>';
     if(repayAtMB){
-      const netReturn=(eb5+rcTotal)-loanAmt;
-      const netGrown=fv(netReturn,mbDate,endDate,mkt);
-      hB+=`<div class="path-row"><span class="desc">${fmt(eb5+rcTotal)} - ${fmt(loanAmt)} repay = ${fmt(netReturn)}</span><span class="val">${fmt(netReturn)}</span></div>`;
-      hB+=`<div class="path-row"><span class="desc">Reinvested ${yrsFromMB.toFixed(1)}yr @ ${(mkt*100).toFixed(0)}%</span><span class="val pos">${fmt(netGrown)}</span></div>`;
+      var netReturn=(eb5+rcTotal)-loanAmt;
+      var netGrown=fv(netReturn,mbDate,endDate,mkt);
+      hB+='<div class="path-row"><span class="desc">'+fmt(eb5+rcTotal)+' - '+fmt(loanAmt)+' = '+fmt(netReturn)+'</span><span class="val">'+fmt(netReturn)+'</span></div>';
+      hB+='<div class="path-row"><span class="desc">Reinvested '+yrsFromMB.toFixed(1)+'yr @ '+(mkt*100).toFixed(0)+'%</span><span class="val pos">'+fmt(netGrown)+'</span></div>';
     } else {
-      const fullGrown=fv(eb5+rcTotal,mbDate,endDate,mkt);
-      hB+=`<div class="path-row"><span class="desc">${fmt(eb5+rcTotal)} reinvested ${yrsFromMB.toFixed(1)}yr</span><span class="val pos">${fmt(fullGrown)}</span></div>`;
+      var fullGrown=fv(eb5+rcTotal,mbDate,endDate,mkt);
+      hB+='<div class="path-row"><span class="desc">'+fmt(eb5+rcTotal)+' reinvested '+yrsFromMB.toFixed(1)+'yr</span><span class="val pos">'+fmt(fullGrown)+'</span></div>';
     }
     hB+='</div>';
-
     hB+='<div class="path-group"><div class="path-group-title">Costs</div>';
-    hB+=`<div class="path-row"><span class="desc">Interest (${(loanRate*100).toFixed(0)}% x ${intYrsFinal.toFixed(1)}yr)</span><span class="val neg">-${fmt(intTotal)}</span></div>`;
-    hB+=`<div class="path-row"><span class="desc">Fees</span><span class="val neg">-${fmt(fees)}</span></div>`;
+    hB+='<div class="path-row"><span class="desc">Interest ('+(loanRate*100).toFixed(0)+'% x '+intYrsFinal.toFixed(1)+'yr)</span><span class="val neg">-'+fmt(intTotal)+'</span></div>';
+    hB+='<div class="path-row"><span class="desc">Fees</span><span class="val neg">-'+fmt(fees)+'</span></div>';
     hB+='</div>';
   }
 
   if(useFiddle){
-    const bf=accumFiddle(eb5EadDate,endDate,fStart,fGrow,mkt);
+    var bf=accumFiddle(fiddleEB5Date,endDate,fStart,fGrow,mkt);
     if(bf>0){
       hB+='<div class="path-group"><div class="path-group-title">Side Income</div>';
-      hB+=`<div class="path-row"><span class="desc">From ${MN[+$('eb5EadMonth').value]} ${$('eb5EadYear').value} (${Math.max(0,yrs(eb5EadDate,endDate)).toFixed(1)}yr)</span><span class="val pos">${fmt(bf)}</span></div>`;
+      hB+='<div class="path-row"><span class="desc">From '+MN[+G('fiddleEB5Month').value]+' '+G('fiddleEB5Year').value+' ('+Math.max(0,yrs(fiddleEB5Date,endDate)).toFixed(1)+'yr)</span><span class="val pos">'+fmt(bf)+'</span></div>';
       hB+='</div>';
     }
   }
 
-  const intB=intangibleValue(eb5EadDate,eb23GcDate,endDate);
-  if(intB>0){
-    const wYrs=Math.max(0,yrs(eb5EadDate,eb23GcDate>endDate?endDate:eb23GcDate));
-    hB+='<div class="path-group"><div class="path-group-title">Intangibles</div>';
-    hB+=`<div class="path-row"><span class="desc">${fmt(calcIntangibleAnnual())}/yr x ${wYrs.toFixed(1)}yr</span><span class="val pos">+${fmt(intB)}</span></div>`;
+  var intResult=calcIntangibles(endDate);
+  if(intResult.total>0){
+    hB+='<div class="path-group"><div class="path-group-title">Intangibles (growing @ '+(+G('intangibleGrowth').value)+'%/yr)</div>';
+    if(intResult.travel>0)hB+='<div class="path-row"><span class="desc">Travel + stamping (from EAD+AP)</span><span class="val muted">'+fmt(intResult.travel)+'</span></div>';
+    if(intResult.peace>0)hB+='<div class="path-row"><span class="desc">Peace of mind (from GC)</span><span class="val muted">'+fmt(intResult.peace)+'</span></div>';
+    hB+='<div class="path-row"><span class="desc">Total intangible value</span><span class="val pos">+'+fmt(intResult.total)+'</span></div>';
     hB+='</div>';
   }
-  hB+=`<div class="path-total"><span>Net Worth + Value</span><span>${fmt(finalB)}</span></div>`;
-  $('breakdownB').innerHTML=hB;
+  hB+='<div class="path-total"><span>Net Worth + Value</span><span>'+fmt(finalB)+'</span></div>';
+  G('breakdownB').innerHTML=hB;
 
   mainChart.data.labels=labels;mainChart.data.datasets[0].data=pvA;mainChart.data.datasets[1].data=pvB;mainChart.update('none');
   diffChart.data.labels=labels;diffChart.data.datasets[0].data=diffs;diffChart.data.datasets[0].backgroundColor=dcols;diffChart.update('none');
@@ -584,74 +613,66 @@ function calculate(){
 
 initCharts();
 
-// === URL PARAMS: Read on load, write on share ===
-const PARAMS_MAP = [
-  ['eb5m','eb5EadMonth'],['eb5y','eb5EadYear'],
-  ['gcm','eb23GcMonth'],['gcy','eb23GcYear'],
+// === URL PARAMS ===
+var PARAMS_MAP=[
   ['im','invMonth'],['iy','invYear'],
   ['lf','lawyerFees'],['ra','rcAdminFee'],['of','otherFees'],
+  ['rc','rcReturn'],['mbm','moneyBackMonth'],['mby','moneyBackYear'],
+
   ['loan','hasLoan'],['la','loanAmt'],['lr','loanRate'],
   ['lcm','loanCloseMonth'],['lcy','loanCloseYear'],
   ['cg','collateralGrows'],['cr','collateralRate'],
-  ['rc','rcReturn'],['mbm','moneyBackMonth'],['mby','moneyBackYear'],
+  ['gcm','eb23GcMonth'],['gcy','eb23GcYear'],
   ['fi','hasFiddle'],['fs','fiddle'],['fg','fiddleGrowth'],
-  ['int','hasIntangibles'],['pm','peaceOfMind'],['tv','travelValue'],
-  ['tp','tripsPerYear'],['sc','stampingCost'],['sf','stampingFreq'],
+  ['fem','fiddleEB5Month'],['fey','fiddleEB5Year'],
+  ['fom','fiddleOtherMonth'],['foy','fiddleOtherYear'],
+  ['int','hasIntangibles'],['edm','eadDateMonth'],['edy','eadDateYear'],
+  ['gdm','gcDateMonth'],['gdy','gcDateYear'],
+  ['tv','travelValue'],['tp','tripsPerYear'],['sc','stampingCost'],['sf','stampingFreq'],
+  ['gp','gcPeace'],['ig','intangibleGrowth'],
   ['yr','yearsSlider'],['mk','mktReturn']
 ];
 
 function loadFromURL(){
-  const p=new URLSearchParams(window.location.search);
+  var p=new URLSearchParams(window.location.search);
   if(p.size===0)return;
-  PARAMS_MAP.forEach(([key,id])=>{
-    const v=p.get(key);
+  PARAMS_MAP.forEach(function(pair){
+    var key=pair[0],id=pair[1],v=p.get(key);
     if(v===null)return;
-    const el=document.getElementById(id);
+    var el=document.getElementById(id);
     if(!el)return;
     if(el.type==='checkbox'){
       el.checked=v==='1';
-      if(id==='hasLoan')document.getElementById('loanDetails').classList.toggle('open',el.checked);
-      if(id==='hasFiddle')document.getElementById('fiddleDetails').classList.toggle('open',el.checked);
-      if(id==='hasIntangibles')document.getElementById('intangiblesDetails').classList.toggle('open',el.checked);
+      if(id==='hasLoan')G('loanDetails').classList.toggle('open',el.checked);
+      if(id==='hasFiddle')G('fiddleDetails').classList.toggle('open',el.checked);
+      if(id==='hasIntangibles')G('intangiblesDetails').classList.toggle('open',el.checked);
     } else if(el.type==='range'){
       el.value=v;
-      if(id==='loanAmt'){
-        const pct=Math.round((+v)/800000*100);
-        document.getElementById('loanAmtLabel').textContent=fmt(+v);document.getElementById('loanPct').textContent=pct+'%';document.getElementById('cashPct').textContent=(100-pct)+'%';document.getElementById('loanBar').style.width=pct+'%';
-      }
-    } else {
-      el.value=v;
-    }
+      if(id==='loanAmt'){var pct=Math.round((+v)/800000*100);G('loanAmtLabel').textContent=fmt(+v);G('loanPct').textContent=pct+'%';G('cashPct').textContent=(100-pct)+'%';G('loanBar').style.width=pct+'%'}
+    } else {el.value=v}
   });
 }
 
 function buildShareURL(){
-  const p=new URLSearchParams();
-  PARAMS_MAP.forEach(([key,id])=>{
-    const el=document.getElementById(id);
+  var p=new URLSearchParams();
+  PARAMS_MAP.forEach(function(pair){
+    var key=pair[0],id=pair[1],el=document.getElementById(id);
     if(!el)return;
-    if(el.type==='checkbox'){
-      if(el.checked)p.set(key,'1');
-    } else {
-      p.set(key,el.value);
-    }
+    if(el.type==='checkbox'){if(el.checked)p.set(key,'1')} else {p.set(key,el.value)}
   });
   return window.location.origin+window.location.pathname+'?'+p.toString();
 }
 
-document.getElementById('shareBtn').addEventListener('click',function(){
-  const url=buildShareURL();
-  navigator.clipboard.writeText(url).then(()=>{
-    document.getElementById('shareMsg').textContent='Link copied!';
-    document.getElementById('shareMsg').style.opacity='1';
-    setTimeout(()=>{document.getElementById('shareMsg').style.opacity='0'},2500);
-  }).catch(()=>{
-    prompt('Copy this link:',url);
-  });
+G('shareBtn').addEventListener('click',function(){
+  var url=buildShareURL();
+  navigator.clipboard.writeText(url).then(function(){
+    G('shareMsg').textContent='Link copied!';G('shareMsg').style.opacity='1';
+    setTimeout(function(){G('shareMsg').style.opacity='0'},2500);
+  }).catch(function(){prompt('Copy this link:',url)});
 });
 
 loadFromURL();
-document.querySelectorAll('input,select').forEach(el=>{el.addEventListener('input',calculate);el.addEventListener('change',calculate)});
+document.querySelectorAll('input,select').forEach(function(el){el.addEventListener('input',calculate);el.addEventListener('change',calculate)});
 calculate();
 </script>
 </body>
